@@ -1,0 +1,4 @@
+*.log
+node_modules/
+*.ova
+apache-maven-3.9.9/

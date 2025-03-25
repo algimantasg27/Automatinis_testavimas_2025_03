@@ -1,0 +1,7 @@
+CSV,,,,,
+KopijuotiRedaguoti,,,,,
+Test Case,First Name,Last Name,Email,Password,Expected Error
+Empty Fields,,,,,All fields are required
+Invalid Email,John,Doe,user@com,SecurePass123!,Invalid format.
+Invalid Email,Jane,Smith,invalidemail,SecurePass123!,Invalid format.
+Invalid Email,Mike ,Brown,test@domain,SecurePass123!,Invalid format.
