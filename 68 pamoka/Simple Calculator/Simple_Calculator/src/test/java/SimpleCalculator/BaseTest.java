@@ -16,13 +16,14 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        driver.get("https://testpages.herokuapp.com/styled/calculator");
+//        driver.get("https://testpages.herokuapp.com/styled/calculator");
+        driver.get("https://automationtesting.co.uk/loadertwo.html");
     }
 
     @AfterEach
     void tearDown() {
         if (driver != null) {
-            driver.quit();
+//            driver.quit();
         }
     }
 }

@@ -2,6 +2,7 @@ package SimpleCalculator;
 
 import lt.techin.BasePage;
 import lt.techin.HomePage;
+import lt.techin.Loadertwo;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SimpleCalculator_test extends BaseTest{
@@ -53,5 +54,13 @@ public class SimpleCalculator_test extends BaseTest{
         homePage.enterInputNumberTwo("1999");
         homePage.clickButtonSubmit();
         assertEquals("7999", homePage.getAnswer());
+    }
+
+    @Test
+    void testLoader () {
+
+        Loadertwo loaderPage = new Loadertwo(driver);
+        assertEquals("This is a new paragraph that appears after 8 seconds.", loaderPage.getParagraphText());
+
     }
 }
