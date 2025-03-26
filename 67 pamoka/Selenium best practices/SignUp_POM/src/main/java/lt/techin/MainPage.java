@@ -12,6 +12,21 @@ public class MainPage extends BasePage{
     @FindBy(linkText = "Sign out")
     WebElement buttonSignOut;
 
+    @FindBy(xpath = "//span[@class='hidden-sm-down']")
+    WebElement customerAccount;
+
+    @FindBy(linkText = "Information")
+    WebElement information;
+
+    @FindBy(id = "field-firstname")
+    WebElement firstname;
+
+    @FindBy(id = "field-lastname")
+    WebElement lastname;
+
+    @FindBy(id = "field-email")
+    WebElement email;
+
     public MainPage(WebDriver driver) {
         super(driver);
     }
@@ -22,6 +37,26 @@ public class MainPage extends BasePage{
 
     public void clickButtonSignOut() {
         buttonSignOut.click();
+    }
+
+    public void clickCustomerAccount() {
+        customerAccount.click();
+    }
+
+    public void clickInformation() {
+        information.click();
+    }
+
+    public String getFirstname() {
+        return firstname.getDomAttribute("value");
+    }
+
+    public String getLastname() {
+        return lastname.getDomAttribute("value");
+    }
+
+    public String getEmail() {
+        return email.getDomAttribute("value");
     }
 
 }

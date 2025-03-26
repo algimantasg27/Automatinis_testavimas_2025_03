@@ -51,8 +51,18 @@ public class PrestashopRegistrationPOM_test extends BaseTest{
         homePage.clickSignInPage();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.enterInputEmailLogin(email);
+//        loginPage.enterInputEmailLogin(email);
+        loginPage.enterInputEmailLogin("user1742844029958@test.com");
         loginPage.enterInputPasswordLogin("Password123!Strong");
+        loginPage.clickSubmitButton();
+
+        MainPage mainPage = new MainPage(driver);
+        mainPage.clickCustomerAccount();
+        mainPage.clickInformation();
+
+        assertEquals("Testas", mainPage.getFirstname());
+        assertEquals("Studentas", mainPage.getLastname());
+        assertEquals("user1742844029958@test.com", mainPage.getEmail());
 
 //        Nesugaudau kampo kaip email`a issaugoti ir panaudoti kituose testuose prie login page.
     }

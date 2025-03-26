@@ -16,6 +16,9 @@ public class LoginPage extends BasePage{
     @FindBy(id = "field-password")
     private WebElement inputPasswordLogin;
 
+    @FindBy(css = ("#submit-login"))
+    private WebElement submitButton;
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -32,5 +35,9 @@ public class LoginPage extends BasePage{
     public void enterInputPasswordLogin(String value) {
         inputPasswordLogin.click();
         inputPasswordLogin.sendKeys(value);
+    }
+
+    public void clickSubmitButton(){
+        submitButton.click();
     }
 }
