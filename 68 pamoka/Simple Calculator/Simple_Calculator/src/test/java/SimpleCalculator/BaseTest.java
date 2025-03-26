@@ -17,7 +17,8 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 //        driver.get("https://testpages.herokuapp.com/styled/calculator");
-        driver.get("https://automationtesting.co.uk/loadertwo.html");
+//        driver.get("https://automationtesting.co.uk/loadertwo.html");
+        driver.get("https://automationtesting.co.uk/actions.html");
     }
 
     @AfterEach
